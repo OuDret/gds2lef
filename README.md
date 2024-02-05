@@ -23,8 +23,7 @@ layers={
 ignore_cells = ["via"]                                     
 #######################
 ```
-
-The script assumes all rectangle, polygon and path is an obstruccion unless it has text label on it. 
+The script assumes all rectangle, polygon and path are obstruccions unless they have text label on it. If so, they will be treated as PIN <text>. 
 
 ## Limitations
 
