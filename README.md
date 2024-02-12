@@ -25,12 +25,13 @@ ignore_cells = ["via"]
 ```
 The script assumes all rectangle, polygon and path are obstruccions unless they have text label on it. If so, they will be treated as PIN <text>. 
 
+It also assumes cells are adjusted to origin by its lower left bounding box
+
 ## Limitations
 
-MACRO SIMMETRY, SITE, SITE_SIZE, PINS DIRECTION AND PINS USE are constant strings set inside print functions. You may need to change those strings or edit the lef file later.
+MACRO SIMMETRY, SITE, PINS DIRECTION AND PINS USE are constant strings set inside print functions. You may need to change those strings or edit the lef file later.
 ```
 print("\tCLASS CORE ;", file=file)
-print("\tSIZE 131.5 BY 340 ;", file=file)
 print("\tSYMMETRY X Y ;", file=file)
 print("\tSITE std_cell ;", file=file)
 ...
