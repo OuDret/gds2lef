@@ -59,12 +59,11 @@ for top_cell in top_cells:
     if top_cell.name in ignore_cells:
         pass
     else:
-        
         print("MACRO " + top_cell.name, file=file)
         print("\tCLASS CORE ;", file=file)
         print("\tORIGIN 0 0 ;", file=file)
         print("\tFOREIGN " +top_cell.name+ " 0 0 ;", file=file)
-        print("\tSIZE 131.5 BY 340 ;", file=file)
+        print("\tSIZE " + str(top_cell.bbox().right/100) + " BY " + str(top_cell.bbox().top/100) + " ;", file=file)
         print("\tSYMMETRY X Y ;", file=file)
         print("\tSITE std_cell ;", file=file)
         
